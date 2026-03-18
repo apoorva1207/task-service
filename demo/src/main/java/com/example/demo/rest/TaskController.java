@@ -2,7 +2,6 @@ package com.example.demo.rest;
 
 
 import com.example.demo.entity.Task;
-import com.example.demo.services.TaskRepository;
 import com.example.demo.services.TaskService;
 import org.springframework.web.bind.annotation.*;
 
@@ -27,6 +26,12 @@ public class TaskController {
     @PostMapping
     public Task createTask (@RequestBody Task task){
         return taskService.createTask(task);
+    }
+
+    @GetMapping("/{id}")
+    public Task getTaskbyId(@PathVariable Long id){
+            return taskService.getallTaskbyId(id);
+
     }
 }
 

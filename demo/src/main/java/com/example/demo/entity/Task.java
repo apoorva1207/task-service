@@ -13,6 +13,10 @@ public class Task {
     private String description;
     private boolean status;
 
+    public Task(){
+
+    }
+
     public Task(long id, String title, String description, boolean status) {
         this.id = id;
         this.title = title;
